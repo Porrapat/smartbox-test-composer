@@ -16,6 +16,10 @@ io.on('connection', (socket) => {
   socket.on('foo', function (data) {
     console.log('here we are in action event and data is: ' + data);
   });
+  socket.on('get-user-info', (data) => {
+    console.log('get-user-info');
+    console.log(data);
+  });
   socket.on('disconnect', () => {
     console.log('user disconnected');
   });
