@@ -13,8 +13,12 @@ $tokenBuilder = (new Builder(new JoseEncoder(), ChainedFormatter::default()));
 $algorithm    = new Sha256();
 $signingKey   = InMemory::plainText(random_bytes(32));
 
+$now   = new DateTimeImmutable();
+
 $token = $tokenBuilder
     ->withClaim('uid', 'my-smartbox')
+    ->withClaim('data', ['data1', 'data2'])
+    ->expiresAt($now->modify('+5 minutes'))
     ->getToken($algorithm, $signingKey);
 
 echo $token->claims()->get('uid'), PHP_EOL; // will print "1"

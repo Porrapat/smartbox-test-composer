@@ -25,4 +25,5 @@ try {
     echo 'Oh no, an error: ' . $e->getMessage();
 }
 
-echo $token_object->claims()->get('uid'), PHP_EOL; // will print "1234567890"
+echo $token_object->claims()->get('uid'), PHP_EOL;
+print_r($token_object->claims()->get('data'));
