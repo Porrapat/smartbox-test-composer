@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Porrapat/smartbox-test-composer/issues"
   },
-  "homepage": "https://github.com/Porrapat/smartbox-test-composer#readme"
+  "homepage": "https://github.com/Porrapat/smartbox-test-composer#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
