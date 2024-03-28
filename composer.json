@@ -1,0 +1,6 @@
+{
+    "name": "porrapat/smartbox-test-composer",
+    "require": {
+        "lcobucci/jwt": "^4.0"
+    }
+}
