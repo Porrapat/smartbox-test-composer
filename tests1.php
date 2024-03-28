@@ -3,7 +3,7 @@ require 'vendor/autoload.php';
 
 use ElephantIO\Client;
 
-$url = 'http://localhost:8081';
+$url = 'http://localhost:3000';
 
 // if client option is omitted then it will use latest client available,
 // aka. version 4.x

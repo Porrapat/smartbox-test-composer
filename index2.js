@@ -13,8 +13,14 @@ app.get('/', (req, res) => {
 
 io.on('connection', (socket) => {
   console.log('a user connected');
+  socket.on('foo', function (data) {
+    console.log('here we are in action event and data is: ' + data);
+  });
+  socket.on('disconnect', () => {
+    console.log('user disconnected');
+  });
 });
 
-server.listen(3000, () => {
-  console.log('server running at http://localhost:3000');
+server.listen(3333, () => {
+  console.log('server running at http://localhost:3333');
 });
