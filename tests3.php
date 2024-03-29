@@ -5,15 +5,22 @@ use ElephantIO\Client;
 
 $url = 'http://localhost:3333';
 
-// if client option is omitted then it will use latest client available,
-// aka. version 4.x
-$options = ['client' => Client::CLIENT_4X];
 
-$client = Client::create($url, $options);
+$client = Client::create($url);
 $client->connect();
 
+function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[random_int(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+
 // emit an event to the server
-$data = ['my php message'];
+$data = [generateRandomString()];
 $client->emit('chat message', $data);
 
 $client->disconnect();
