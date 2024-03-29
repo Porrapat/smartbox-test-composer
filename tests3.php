@@ -11,10 +11,11 @@ $options = ['client' => Client::CLIENT_4X];
 
 $client = Client::create($url, $options);
 $client->connect();
-// $client->of('/'); // can be omitted if connecting to default namespace
 
 // emit an event to the server
 $data = ['my php message'];
 $client->emit('chat message', $data);
 
 $client->disconnect();
+
+echo "Run My PHP File";
