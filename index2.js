@@ -20,6 +20,9 @@ io.on('connection', (socket) => {
     console.log('get-user-info');
     console.log(data);
   });
+  socket.on('chat message', (msg) => {
+    console.log('message: ' + msg);
+  });
   socket.on('disconnect', () => {
     console.log('user disconnected');
   });
