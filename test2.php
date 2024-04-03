@@ -11,7 +11,10 @@ require 'vendor/autoload.php';
 
 $tokenBuilder = (new Builder(new JoseEncoder(), ChainedFormatter::default()));
 $algorithm    = new Sha256();
-$signingKey   = InMemory::plainText(random_bytes(32));
+
+// eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJteS1zbWFydGJveCIsImRhdGEiOlsiZGF0YTEiLCJkYXRhMiJdLCJleHAiOjE3MTIxMjAzNDcuMDE3Njk2fQ.hFXpw2f83VyAufMJAePqk_gJd--2mBqpaAVCCGSokgc
+$s_random_bytes = '12345678901234567890123456789012';
+$signingKey   = InMemory::plainText($s_random_bytes);
 
 $now   = new DateTimeImmutable();
 
