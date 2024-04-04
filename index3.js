@@ -3,7 +3,7 @@ const https = require('https');
 const fs = require('fs'); // Required to read SSL certificate files
 
 const app = express();
-const port = 8000;
+const port = 8443;
 
 // respond with "hello world" when a GET request is made to the homepage
 app.get('/', (req, res) => {
