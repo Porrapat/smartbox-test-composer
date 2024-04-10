@@ -3,8 +3,7 @@ require 'vendor/autoload.php';
 
 use ElephantIO\Client;
 
-$url = 'http://localhost:3333';
-
+$url = 'https://smartboxtest.porrapat.com:8443';
 
 $client = Client::create($url);
 $client->connect();
