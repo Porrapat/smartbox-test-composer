@@ -29,6 +29,9 @@ io.on('connection', (socket) => {
   socket.on('chat message', (msg) => {
     io.emit('chat_broadcast_message', msg);
   });
+  socket.on('send_erp_order_resync_event', (msg) => {
+    io.emit('send_erp_order_resync_event_broadcast', msg.client_id);
+  });
   socket.on('disconnect', () => {
     console.log('user disconnected');
   });

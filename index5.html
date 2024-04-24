@@ -45,6 +45,15 @@
         messages.appendChild(item);
         window.scrollTo(0, document.body.scrollHeight);
       });
+
+      socket.on('send_erp_order_resync_event_broadcast', (id) => {
+        if (id !== 0 && id !== 9999) {
+          const item = document.createElement('li');
+          item.textContent = 'Client ID is:' + id;
+          messages.appendChild(item);
+          window.scrollTo(0, document.body.scrollHeight);
+        }
+      });
     </script>
   </body>
 </html>

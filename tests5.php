@@ -22,7 +22,8 @@ function generateRandomString($length = 10) {
 
 // emit an event to the server
 $data = [generateRandomString()];
-$client->emit('chat message', $data);
+// $client->emit('chat message', $data);
+$client->emit('send_erp_order_resync_event', ['client_id'=> 1]);
 
 $client->disconnect();
 
