@@ -32,6 +32,9 @@ io.on('connection', (socket) => {
   socket.on('send_erp_order_resync_event', (msg) => {
     io.emit('send_erp_order_resync_event_broadcast', msg.client_id);
   });
+  socket.on('event_customer_6', (msg) => {
+    io.emit('event_broadcast_customer_6', msg);
+  });
   socket.on('disconnect', () => {
     console.log('user disconnected');
   });

@@ -54,6 +54,13 @@
           window.scrollTo(0, document.body.scrollHeight);
         }
       });
+
+      socket.on('event_broadcast_customer_6', (msg) => {
+        const item = document.createElement('li');
+        item.textContent = 'event_broadcast_customer_6 - ' + msg.eventType + ' workStationID:' + msg.workStationID + ' userID:' + msg.userID;
+        messages.appendChild(item);
+        window.scrollTo(0, document.body.scrollHeight);
+      });
     </script>
   </body>
 </html>
