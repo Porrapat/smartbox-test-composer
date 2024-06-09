@@ -5,7 +5,9 @@ use ElephantIO\Client;
 
 // $url = 'https://smartboxtest.porrapat.com:8443';
 // $url = 'https://socket.slimmerwerken.app/';
-$url = 'http://localhost:3000';
+// $url = 'http://localhost:3000';
+// $url = 'https://smartboxhttps.porrapat.com/';
+$url = 'https://smartboxhttps.porrapat.com/';
 
 $client = Client::create($url);
 $client->connect();

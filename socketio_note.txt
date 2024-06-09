@@ -1,0 +1,7 @@
+const io = new Server(server, {
+  cors: {
+    origin: true,
+    credentials: true,
+  },
+  allowEIO3: true,
+});
